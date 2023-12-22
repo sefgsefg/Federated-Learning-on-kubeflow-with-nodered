@@ -21,15 +21,15 @@ Kube-node-red is aiming to integrate Kubeflow/Kubebeters with node-red, leveragi
 # Self-defined Node
 ## Prerequisites
 - `snippet.js`
-紀錄以Python編寫之機器學習任務代碼，用以依據前端輸入修改任務流程
+Record the machine learning task code written in Python to modify the task process based on front-end input
 - `<example>.js`
-節點後端邏輯及前端輸入處理
+Node back-end logic and front-end input processing
 - `<example>.html`
-節點前端邏輯與使用者配置邏輯與使用者配置
+Node front-end logic and user configuration logic and user configuration
 
 ## snippet.js
 
-1.將python編寫之機器學習任務用以在kubeflow執行，以js字串儲存於常數供節點調用修改
+1.Machine learning tasks written in python are executed in kubeflow, and js strings are stored in constants for node calls and modifications.
 
 ```javascript=
 const EXAMPLE =
@@ -39,12 +39,12 @@ const EXAMPLE =
     data = data.values  
 `;
 ```
-2. 將需要依照使用者修改部分以樣板字面值"%s"代換
+2. The user-modified part will need to be replaced with the template literal value "%s"
 ```javascript=
 `   data.fillna(value=%s, inplace=True)
 `
 ```
-3. 將該常數輸出
+3. Output this constant
 ```javascript=
 module.exports = {
     
@@ -54,18 +54,18 @@ module.exports = {
 ```        
 ##  example.js
 
-1. 導入"util"模組並依照檔案結構導入準備好的snippet.js
+1. Import the "util" module and import the prepared snippet.js according to the file structure
 ```javascript=
 const util = require('util');
 const snippets = require('../snippets');
 ```
 
-2. 將使用者於前端之配置替換至目標代碼
+2. Replace the user's front-end configuration with the target code
 ```javascript=
 example = util.format(snippets.EXAMPLE,config.userinput)
 ```
 
-3. 將完成修改之代碼以變數儲存於msg物件屬性
+3. Store the modified code as a variable in the msg object attribute
 ```javascript=
 node.on('input', function(msg) {
             
@@ -76,7 +76,7 @@ node.on('input', function(msg) {
 ```
 
 ##  example.html
-1. 依照機器學習任務需求設定相關配置
+1. Set relevant configurations according to machine learning task requirements
 ```javascript=
 defaults: {
             userinput: { value: {} }                    
@@ -84,7 +84,7 @@ defaults: {
 ```
 
 
-2.編寫相應html樣板
+2.Write corresponding html template
 ```html=
 <div class="form-row">
         <label for="node-input-userinput>UserInput</label>
