@@ -1,5 +1,9 @@
 # Federated-Learning-on-kubeflow-with-nodered
+A simple example of federated learning on kubeflow with node-red which can control number of clients
 
-Put the html and javascripts files into 1.connect-kubeflow\node_modules\nodepipe folder. Then modify the package.json to register new node.
+## Implementation
 
-Put the py file into 1.connect-kubeflow\py folder and the pipeline yaml file into 1.connect-kubeflow\py\pipelines folder.
+
+## Reference
+https://github.com/justin0322/Node-RED-Kubeflow-Pipeline-Extension
+
