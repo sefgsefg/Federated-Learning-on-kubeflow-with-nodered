@@ -3,6 +3,18 @@ A simple example of federated learning on kubeflow with node-red which can contr
 
 ## Implementation
 
+```
+git clone https://github.com/sefgsefg/Federated-Learning-on-kubeflow-with-nodered.git
+```
+
+```
+cd Federated-Learning-on-kubeflow-with-nodered/FL_kubeflow_with_node-red/examples
+```
+
+```
+./run.sh main
+```
+
 1.Build the Federated-Learning flow on node-red.
 
 ![](https://github.com/sefgsefg/Federated-Learning-on-kubeflow-with-nodered/blob/main/FL_kubeflow_with_node-red/build_flow.png)
