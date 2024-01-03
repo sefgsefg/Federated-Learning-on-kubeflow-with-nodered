@@ -15,6 +15,29 @@ cd Federated-Learning-on-kubeflow-with-nodered/FL_kubeflow_with_node-red/example
 ./run.sh main
 ```
 
+Problem solve: -bash: ./run.sh: Permission denied
+```
+chmod +x run.sh
+```
+
+```
+cd scripts
+```
+
+```
+chmod +x entrypoint.sh
+```
+
+```
+cd ..
+```
+Run ./run.sh main again
+```
+./run.sh main
+```
+
+
+
 1.Build the Federated-Learning flow on node-red.
 
 ![](https://github.com/sefgsefg/Federated-Learning-on-kubeflow-with-nodered/blob/main/FL_kubeflow_with_node-red/build_flow.png)
