@@ -8,7 +8,7 @@ git clone https://github.com/sefgsefg/Federated-Learning-on-kubeflow-with-nodere
 ```
 
 ```
-cd Federated-Learning-on-kubeflow-with-nodered/FL_kubeflow_with_node-red/examples
+cd Federated-Learning-on-kubeflow-with-nodered/FL_kubeflow_with_node-red/example
 ```
 
 ```
